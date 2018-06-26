@@ -99,9 +99,22 @@ public class MyQAJava {
         return a + b + c;
     }
 
+    public String name(boolean male) {
+
+        if (male) {
+            return "zak";
+        } else {
+            return "arwa";
+        }
+
+    }
+
     public static void main(String[] args) {
 
         MyQAJava myQAJava = new MyQAJava();
+
+        System.out.println(myQAJava.name(true));
+        System.out.println(myQAJava.name(false));
 
         System.out.println(myQAJava.uniqueSum(1, 1, 2));
 
@@ -147,10 +160,10 @@ public class MyQAJava {
         personList.add(new Person("Zakariya Mohamed", 23, "Software Developer"));
         personList.add(new Person("Pablo Escobar", 19, "Spanish Teacher"));
         personList.add(new Person("Cristiano Ronaldo", 46, "Footballer"));
-        personList.add(new Person("Lebron", 43, "Basketball Player"));
-        
-        
-       /* for (int i = 0; i < personList.size(); i++) {
+        personList.add(new Person("Lebron James", 43, "Basketball Player"));
+        personList.add(new Person("Arwa Tawawala", 109, "Mrs right"));
+
+        /* for (int i = 0; i < personList.size(); i++) {
             
             System.out.println("-----------------------------------------");
             
@@ -160,10 +173,9 @@ public class MyQAJava {
             
             
         }  */
-      
-    /*  Scanner input = new Scanner(System.in);
-        
-        System.out.println("Search name:");
+        Scanner input = new Scanner(System.in);
+
+        /*  System.out.println("Search name:");
          String nameInput = input.next();
          
          for (int i = 0; i < personList.size(); i++) {
@@ -176,9 +188,37 @@ public class MyQAJava {
             System.out.println("Job Title: "+personList.get(i).getJobTitle());
             
             }
-        } */
-        
+        }  */
+        Garage garage = new Garage();
 
+        garage.addNewVehicle(new Car(4, 2000.0, "Fred Parker"));
+        garage.addNewVehicle(new Motorcycle(2, 9000.0, "Bob Jerry"));
+        garage.addNewVehicle(new Van(4, 5000.0, "Karina Johnson"));
+        garage.addNewVehicle(new Car(4, 27000.0, "Marc Brown"));
+        garage.addNewVehicle(new Car(4, 223000.0, "Danny Rose"));
+        garage.addNewVehicle(new Lorry(8, 255000.0, "Paul Pogba"));
+        garage.addNewVehicle(new Lorry(10, 222000.0, "Bill Gates"));
+        garage.addNewVehicle(new Motorcycle(2, 200.0, "Nathan Ahrens"));
+
+        for (int i = 0; i < garage.getAllVehicles().size(); i++) {
+            System.out.println("------------------------------------------------");
+            System.out.println("A " + garage.getAllVehicles().get(i).getVehicleType()
+                    + " with " + garage.getAllVehicles().get(i).getNumberOfWheels() + " wheels owned by "
+                    + garage.getAllVehicles().get(i).getOwner() + ".");
+
+        }
+
+        System.out.println("Search vehicle by name:");
+        String vehicleOwner = input.next();
+
+        System.out.println("Found vehicles:");
+        
+        for (int i = 0; i < garage.searchVehicleByOwner(vehicleOwner).size(); i++) {
+
+            System.out.println("A " + garage.searchVehicleByOwner(vehicleOwner).get(i).getVehicleType()
+                    + " with " + garage.searchVehicleByOwner(vehicleOwner).get(i).getNumberOfWheels() + " wheels owned by "
+                    + garage.searchVehicleByOwner(vehicleOwner).get(i).getOwner() + ".");
+        }
 
     }
 
