@@ -113,10 +113,10 @@ public class MyQAJava {
 
         MyQAJava myQAJava = new MyQAJava();
 
-        System.out.println(myQAJava.name(true));
+       /* System.out.println(myQAJava.name(true));
         System.out.println(myQAJava.name(false));
 
-        System.out.println(myQAJava.uniqueSum(1, 1, 2));
+        System.out.println(myQAJava.uniqueSum(1, 1, 2)); */
 
         /*  System.out.println("Hello World!");
         
@@ -154,7 +154,10 @@ public class MyQAJava {
             System.out.println(numbers[i] * 10);
 
         } */
-        // System.out.println(myQAJava.blackJack(21, 24));
+         System.out.println("Blackjack: "+myQAJava.blackJack(22, 15));
+         
+         
+         
         ArrayList<Person> personList = new ArrayList<Person>();
         personList.add(new Person("Daniel Ogunsanya", 89, "Cleaner"));
         personList.add(new Person("Zakariya Mohamed", 23, "Software Developer"));
@@ -189,7 +192,7 @@ public class MyQAJava {
             
             }
         }  */
-        Garage garage = new Garage();
+     /*   Garage garage = new Garage();
 
         garage.addNewVehicle(new Car(4, 2000.0, "Fred Parker"));
         garage.addNewVehicle(new Motorcycle(2, 9000.0, "Bob Jerry"));
@@ -218,7 +221,11 @@ public class MyQAJava {
             System.out.println("A " + garage.searchVehicleByOwner(vehicleOwner).get(i).getVehicleType()
                     + " with " + garage.searchVehicleByOwner(vehicleOwner).get(i).getNumberOfWheels() + " wheels owned by "
                     + garage.searchVehicleByOwner(vehicleOwner).get(i).getOwner() + ".");
-        }
+        } */
+     
+     
+     //CheapestPaint.calculateCheapest();
+     
 
     }
 
